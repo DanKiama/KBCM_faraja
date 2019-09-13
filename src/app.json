@@ -1,0 +1,20 @@
+{
+  "name": "Faraja Rafting Website",
+  "description": "Using Gatsby and Contentful project.",
+  "keywords": [
+    "contentful",
+    "gatsby",
+    "static",
+    "ssg"
+  ],
+  "repository": "https://granular.visualstudio.com/DefaultCollection/Faraja_Rafting_Website/_git/Faraja_Rafting_Website",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}

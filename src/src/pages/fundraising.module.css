@@ -1,0 +1,16 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61.8vh;
+  max-height: 400px;
+  background: #000;
+  font-size: 2em;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 77%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 77%, 0% 100%);
+}
+
+.hero h1{
+  color: #fff;
+}

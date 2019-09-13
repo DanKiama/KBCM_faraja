@@ -1,0 +1,301 @@
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.prize{
+  background:#e4419e;
+  padding: 50px 10px 10px 10px;
+  color: #fff;
+}
+
+.prize ul{
+  list-style: none;
+  display: flex;
+  text-align: center;
+  color: #000;
+}
+
+.prize ul li h4{
+display: none;
+
+}
+
+
+@media(max-width: 600px) {
+  .prize{
+    
+    -webkit-clip-path:inherit;
+    clip-path: inherit;
+  }.prize li, .spectator li{
+    display: inherit !important;
+  
+  }
+  .prize ul, .spectator ul{
+    
+    display: block !important;
+  
+  }
+
+}
+
+.difference{
+  margin: 0
+}
+.difference a{
+font-size: 2.0em;
+padding-bottom:20px;
+}
+.fight a{
+  color: #fff;
+}
+.spectator, .fight{
+  padding: 10px 0  50px
+}
+
+#makeDifferenceSection{
+  margin-top: 5%
+}
+@media only screen and (max-width:767px){
+  #makeDifference .relative .animated.fadeIn, #makeDifference .relative .animated{
+    animation: none;
+    opacity: 1 !important;
+  }
+}
+.previewTitle {
+  font-size: 2.5em;
+  font-family: 'Bangers', Arial;
+  color:#00adee;
+  text-align: center
+}
+.spectator .previewTitle, .fight,.prize .previewTitle{
+color:#c9e0e8
+}
+.prize .previewTitle{
+  color: #fff;
+ 
+}
+.paddle img{
+  width:40%;
+  margin: auto;
+    animation: fadein 2s;
+    padding:10px;
+    /*transform: rotate(-90deg) translateZ(0);
+    transition: all .3s ease .48s;
+    position: absolute;
+    bottom:50%;
+    left:80%*/
+}
+
+.spectator .description, .fight .body{
+  color:#c9e0e8
+  }
+  .spectator .body{
+    background-color: #fff;
+    background-image: linear-gradient(141deg, #ccc 0%, #fff 51%, #ccc 75%);
+    color: #3f93b2;
+    box-shadow: 4px 4px #ccc;
+    
+  }
+.tag {
+  color: #A0A0A0;
+  text-decoration: none;
+  display: inline-block;
+  padding: .33333rem .5rem;
+  line-height: 1;
+  border-radius: 2px;
+  border: 1px solid #A0A0A0;
+  margin-right: .5em;
+}
+.spectatorImages{
+background: #fff;
+
+}
+
+.spectatorImages h4{
+  padding: 50px;
+  vertical-align: middle;
+  
+}
+@media(max-width: 600px) {
+  .spectatorImages h4{
+  font-size:14px;
+  }
+}
+.differenceList {
+  margin: 0px;
+  padding:0;
+
+ 
+ 
+}
+.differenceList li{
+  width: 380px;
+  height: auto;
+  display: block;
+  padding: 10px;
+  
+}
+
+/*fundraising section css*/
+
+.thermo_wrap {
+  width: 90%;
+  padding: 30px 4px 90px 0;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+.timelineBlock h3 {
+  font-size: 25px;
+  margin: 0;
+}
+h3.center{
+  text-align: center;
+  color:#373F49
+}
+
+.homeFundraiserSection{
+  min-height: 900px;
+  background: url('https://images.ctfassets.net/snidcxsl43uf/60icAraiDMILpPXZZWr0hn/1f9297382c02e0723af94fa74735ab3e/blockchain.png?h=250');
+}
+
+.fundsContent{
+  background: #fff;
+  padding: 15px 20px;
+  width:50%;
+}
+@media only screen and (max-width:767px){
+  .fundsContent{
+    width:100%
+  }
+}
+.topFunds{
+  position: absolute;
+  left: 41%;
+  top: 70%;
+  background: url('/world.jpg');
+  width: 290px;
+  height: 290px;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 9;
+  color: #fff;
+  padding: 85px 40px;
+  background-size: cover;
+  margin-top: 20px;
+}
+@media only screen and (max-width:767px){
+  .topFunds{
+    left: 0;
+    border-radius: 0;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.topFunds p{
+  font-size: 30px;
+  line-height: 15px;
+  font-weight: bold;
+}
+.topFunds p span{
+  font-size: 20px;
+  line-height: initial;
+  font-weight: 100;
+}
+.fundRaiser1{
+  width: 170px;
+  height: 170px;
+  background: #c73a86;
+  top: 50%;
+  right: 10%;
+  border-radius: 50%;
+  padding: 60px 10px;
+  text-align: center;
+  color: #fff;
+  margin-left: 100px;
+  position: absolute
+}
+
+
+.fundRaiser2{
+  width: 150px;
+  height: 150px;
+  background: #c73a86;
+  float: left;
+  border-radius: 50%;
+  padding: 30px 5px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  margin: 15% 0;
+}
+.fundRaiser3{
+  width: 130px;
+  height: 130px;
+  background: #c73a86;
+  float: left;
+  border-radius: 50%;
+  padding: 30px 5px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 17%;
+  margin-top: 5%;
+}
+.fundRaiser4{
+  width: 140px;
+  height: 140px;
+  background: #c73a86;
+  float: left;
+  border-radius: 50%;
+  padding: 30px 5px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 8%;
+  margin-top: 26%
+  
+}
+.fundRaiser5{
+  width: 130px;
+  height: 130px;
+  background: #c73a86;
+  float: left;
+  border-radius: 50%;
+  padding: 30px 5px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  left: 35%;
+  margin-top: 34%;
+}
+@media only screen and (max-width:767px){
+  .fundRaiser1, .fundRaiser2, .fundRaiser3, .fundRaiser4, .fundRaiser5{
+    position: relative;
+    float: left;
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+    height: auto;
+    margin: 10px 0 0;
+    left: 0;
+  }
+ 
+}
+.homeFundraiserSection span strong{
+  width:100%;
+  float: left
+}
+
+/*end fundraising section css*/
+
+

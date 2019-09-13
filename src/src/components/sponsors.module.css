@@ -1,0 +1,17 @@
+
+.image{
+  width: 150px;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #f4f4f4;
+  margin: 5px;
+  float: left;
+  box-shadow: 0 30px 40px -48px #5e5e5e;
+}
+
+h4.headline{
+ margin-bottom:30px;
+}
+
+
