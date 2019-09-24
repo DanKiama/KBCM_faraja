@@ -361,6 +361,9 @@ section {
   color: #54351b;
 
 }
+.host_your_own a, .host_your_own a:hover{
+  text-decoration: none
+}
 .host_your_own span::after{
   content: '';
 			display:block;

@@ -88,8 +88,10 @@ class homePage extends React.Component{
                       <div className="row">
                         
                           <div className="col-md-4 col-sm-12 col-12">
+                          <Link to="/overview/">
+                            <span>Host your own</span>
+                            </Link> 
                                   
-                                  <span>Host your own</span>
                           </div>
                           <div className="col-md-4 col-sm-12 col-12">
                           <span>How it helps</span>
