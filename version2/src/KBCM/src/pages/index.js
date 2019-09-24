@@ -94,10 +94,13 @@ class homePage extends React.Component{
                                   
                           </div>
                           <div className="col-md-4 col-sm-12 col-12">
+                          <Link to="/overview/">
                           <span>How it helps</span>
+                            </Link> 
                           </div>
                           <div className="col-md-4 col-sm-12 col-12">
-                          <span>KBCM agenda</span>
+                          <Link to="/overview/">
+                          <span>KBCM agenda</span></Link> 
                           </div>
                         </div>
                 
