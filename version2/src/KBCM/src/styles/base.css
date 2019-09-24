@@ -58,7 +58,14 @@ body {
   max-width: 930px;
   margin: auto
 }
-
+.button{
+  background: #d6970b;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-grid;
+}
 #logo img{
  width: 100%;
  margin: 10px;
@@ -399,4 +406,42 @@ section {
 }
 .host_your_own h2{
   color: #fff
+}
+
+.upcoming .logo{
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  min-height: 100px;
+    max-height: 100px;
+    overflow: hidden;
+ 
+}
+.upcoming .event_item{
+  float: left;
+  margin:0 10px;
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff
+}
+.event_name {
+  margin: 15px 0;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+
+.bottom_section{
+  background:url('https://images.ctfassets.net/i6lqydrpe4hk/4sj0lRkWX7MxJ4Ta1Bp8Of/10b525135df9eb4609fb4c4ebc3fc65a/bg-4.png') no-repeat;
+  background-size: contain;
+
+}
+@media only screen and (min-width:767px){
+  .bottom_section{
+    padding: 100px;
+  
+  }
+}
+.bottom_heading h2{
+  
 }

@@ -11,7 +11,7 @@ export default () => (
         <Link to="/register/"><span data-hover="Home">Home</span></Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/sponsorship/"><span data-hover="Sponsorship">Sponsorship</span></Link>
+        <Link to="#about"><span data-hover="About">About </span></Link>
         
       </li>
       <li className={styles.navigationItem}>

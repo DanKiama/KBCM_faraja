@@ -7,12 +7,15 @@ import SEO from "../components/seo";
 import { Parallax } from 'react-scroll-parallax';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
-import Tilt from 'react-parallax-tilt';
+
 
 class homePage extends React.Component{
   render() {
     const banner = get(this, 'props.data.allContentfulBannerSection.nodes')[0]
     const aboutUsSection = get(this, 'props.data.allContentfulHomeAboutUsSection.nodes')[0]
+    const hostYourOwn = get(this, 'props.data.allContentfulHostCoffeeMorning.nodes')[0]
+    const upcomingCoffeeMornings = get(this, 'props.data.allContentfulUpcomingCoffeeMornings.edges')
+    console.log(upcomingCoffeeMornings);
     return (
       <Layout>
         <SEO title="Banner" />
@@ -25,7 +28,7 @@ class homePage extends React.Component{
             <div className="banner_message">
              
                <h1>
-               <Tilt> <img src="../header.png"/></Tilt>
+          <img src="../header.png"/>
               
           
               </h1>
@@ -36,15 +39,17 @@ class homePage extends React.Component{
               banner.description.content[0].content[0].value}
               
               </p>
+             <Link to="#about">
+             <div className="scroll">
              
-              <div className="scroll">
              
-             
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
+             <div className="chevron"></div>
+             <div className="chevron"></div>
+             <div className="chevron"></div>
 
-              </div>
+           </div>
+             </Link>
+             
             </div>
   
          
@@ -64,6 +69,7 @@ class homePage extends React.Component{
                                   
                       aboutUsSection.description.content[0].content[0].value}   
                      </p>
+                     <a className="button" href="https://farajacancersupport.org/about/" target="blank">Read more about Faraja</a>
                   </div>
                 </div>
                </div>
@@ -100,7 +106,7 @@ class homePage extends React.Component{
        <div className="inner">
          <div className="row">
          <div className="col-md-12 col-sm-12 col-12">
-                        <h2>IDEAS ON HOW TO HOST A COFFEE MORNING</h2><br/>
+                        <h2>{hostYourOwn.mainTitle}</h2><br/>
           </div>
          </div>
        <div className="row">
@@ -109,18 +115,20 @@ class homePage extends React.Component{
                         <ParallaxProvider>
             
                           <Parallax className="custom-class" x={[-50, 0]} tagOuter="figure">
-                <Tilt> <img src="../coffeeMaker.gif"/></Tilt>
+              
+                            <Img alt="coffee maker" sizes={hostYourOwn.ideaOne.sizes} />
+            
                          
                           </Parallax>
                       </ParallaxProvider>
                       </div>
                       <div className="col-md-7 col-sm-12 col-12">
-                        <h4>Have a bake sale at work/school/church</h4>
+                        <h4>{hostYourOwn.ideOneTitle}</h4>
                         <p>
-                        You can do it yourself or get your friends with “baking fingers” to help! Make simple, delicious pastries and sell them at a profit with proceeds going towards Faraja Cancer Support Trust
-                        </p>
-                        <p>Host a Coffee Morning as a residential estate
-                          Get all tenants to meet at the carpark/ swimming pool and have a “pot luck” brunch with a donation box!</p>
+                        {hostYourOwn.ideaOneDescription.content && hostYourOwn.ideaOneDescription.content.length && hostYourOwn.ideaOneDescription.content[0].content.length &&
+              
+              hostYourOwn.ideaOneDescription.content[0].content[0].value}
+                       </p>
                         
                       </div>
         </div>
@@ -130,12 +138,12 @@ class homePage extends React.Component{
        <div className="inner">
        <div className="row">
        <div className="col-md-7 col-sm-12 col-12">
-                        <h4>Host a Coffee Morning as a residential estate</h4>
+                        <h4>{hostYourOwn.ideaTwoTitle}</h4>
                         <p>
-                        You can do it yourself or get your friends with “baking fingers” to help! Make simple, delicious pastries and sell them at a profit with proceeds going towards Faraja Cancer Support Trust
-                        </p>
-                        <p>Host a Coffee Morning as a residential estate
-                          Get all tenants to meet at the carpark/ swimming pool and have a “pot luck” brunch with a donation box!</p>
+                        {hostYourOwn.ideaTwoDescription.content && hostYourOwn.ideaTwoDescription.content.length && hostYourOwn.ideaTwoDescription.content[0].content.length &&
+              
+              hostYourOwn.ideaTwoDescription.content[0].content[0].value}
+                       </p>
                         
                       </div>
                       <div className="col-md-5 col-sm-12 col-12 align-center">
@@ -144,7 +152,7 @@ class homePage extends React.Component{
             
                           <Parallax className="custom-class" y={[10, 0]} tagOuter="figure">
                 
-                          <img src="../residential.png"/>
+                          <Img alt="coffee maker" sizes={hostYourOwn.ideaTwoImage.sizes} />
                           </Parallax>
                       </ParallaxProvider>
                       </div>
@@ -153,7 +161,7 @@ class homePage extends React.Component{
        </div>
         </section>
 
-        <section className="host_your_own">
+        <section className="host_your_own upcoming">
         
          
         <div className="inner">
@@ -162,15 +170,22 @@ class homePage extends React.Component{
             <div className="col-md-12 col-sm-12 col-12 align-center">
               <h2>Upcoming coffee mornings</h2>
             </div>
-           </div>
+           </div><br/>
             <div className="row">
               
-            <div class="col">
-                      <div className="event_item">
-                        <div className="logo"></div>
-                        <div className="event_name">Zep RE</div>
-                        <div className="event_dates">TBC</div>
-                      </div>
+            <div className="col-md-12">
+            {upcomingCoffeeMornings.map(({ node }) => {
+           
+           return (
+         
+            <div className="event_item">
+            <div className="logo"> <Img alt="coffee maker" sizes={node.logo.sizes} /></div>
+            <div className="event_name">{node.name}</div>
+            <div className="event_dates">{node.confirmation}</div>
+            </div>
+         
+           )})}
+                     
            </div>
           
               </div>
@@ -178,7 +193,37 @@ class homePage extends React.Component{
        
      </div>
 </section>
+
+<section className="bottom_section">
+        
+         
+        <div className="inner">
+      
+          <div className="row">
+          <div className="col-md-5 col-sm-12 col-12 align-center">
+             
+            </div>
+            <div className="col-md-7 col-sm-12 col-12 bottom_heading ">
+            
+              <h2>Long heading will go in here</h2>
+              <h3>Speak to one of us now</h3>
+              <p>
+              Discover your special morning cup of coffee here at Arabusta! We will offer you aromatic blend of arabica and orient spices. Our regular clients adore this morning routine and come to us everyday for the next portion of coffee. Our menu includes various special beverages you can try!
+
+Call us or contact online to book a table for your perfect meeting with friends! You will have your great time at Aromecafe over coffee and dessert.
+              </p>
+              <Link className="button" to="" target="blank">Contact us</Link>
+
+            </div>
+           </div>
+       
+      
+       
+     </div>
+</section>
+
       </Layout>
+      
     )
   }
 }
@@ -227,9 +272,58 @@ export const query = graphql`
     }
 
 
-   
+    allContentfulHostCoffeeMorning  {
+      nodes {
+        mainTitle
+        ideOneTitle
+        ideaTwoTitle
+        ideaOne {
+          sizes(resizingBehavior: SCALE) {
+           ...GatsbyContentfulSizes_withWebp
+          }
+        }
+
+        ideaOneDescription {
+          content {
+            content {
+              value
+            }
+          }
+        }
+
+        
+        ideaTwoImage {
+          sizes(resizingBehavior: SCALE) {
+           ...GatsbyContentfulSizes_withWebp
+          }
+        }
+
+        ideaTwoDescription {
+          content {
+            content {
+              value
+            }
+          }
+        }
+        
+      }
+    }
 
 
+    allContentfulUpcomingCoffeeMornings {
+   edges{
+    node {
+      
+      name
+      logo {
+        sizes(resizingBehavior: SCALE) {
+         ...GatsbyContentfulSizes_withWebp
+        }
+      }
+      confirmation
+    }
+  }
+   }
 
 
   }
