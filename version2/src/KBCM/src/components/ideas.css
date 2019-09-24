@@ -1,0 +1,31 @@
+.bakesale{
+    background-image: url('../images/pic1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+@media only screen and (min-width:767px){
+    .bakesale, .residential, .pledges, .auction, .chama{
+padding:150px
+    }
+}
+.residential{
+    background: url('../images/pic2.png') no-repeat;
+    background-position: right;
+    background-size: contain;
+
+
+}
+.chama{
+    background: url('../images/pic7.png') no-repeat;
+    background-position: right;
+    background-size: contain;
+
+
+}
+
+.pledges{
+    background-image: url('../images/pic3.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
