@@ -208,10 +208,7 @@ class homePage extends React.Component{
               <h2>Long heading will go in here</h2>
               <h3>Speak to one of us now</h3>
               <p>
-              Discover your special morning cup of coffee here at Arabusta! We will offer you aromatic blend of arabica and orient spices. Our regular clients adore this morning routine and come to us everyday for the next portion of coffee. Our menu includes various special beverages you can try!
-
-Call us or contact online to book a table for your perfect meeting with friends! You will have your great time at Aromecafe over coffee and dessert.
-              </p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
               <Link className="button" to="" target="blank">Contact us</Link>
 
             </div>
