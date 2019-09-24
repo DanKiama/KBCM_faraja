@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Footer from "../components/footer"
 import Header from "./header"
 import "./layout.css"
 
@@ -28,11 +28,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Made by
-          {` `}
-          <a href="https://www.granularit.com">Granular IT</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )

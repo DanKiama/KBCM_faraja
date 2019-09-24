@@ -1,0 +1,14 @@
+footer.footer{
+    background: #161411; 
+    color: #fff
+}
+.footer li {
+    display: inline-table;
+    margin: 15px 15px 0;
+    font-size: 30px;
+   
+}
+.footer ul{
+    text-align: center;
+    padding: 0
+}
