@@ -21,7 +21,7 @@ export default () => (
         <Link to="/"><span data-hover="Gallery">Gallery</span></Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/"><span data-hover="Contact">Contact</span></Link>
+        <Link to="/contactus/"><span data-hover="Contact">Contact</span></Link>
       </li>
       <li className={styles.navigationItem}>
         <Link to="/"><span data-hover="FAQs">FAQs</span></Link>

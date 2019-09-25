@@ -20,7 +20,7 @@ export default class Header extends React.Component {
                 <div className="wrapper">
                     <div className="row justify-content-between">
                         <div className="col-lg-2 col-md-2 col-sm-3 col-3 padding-0">
-                            <div id="logo">   <Link to="/"><img src="../images/faraja.png" alt="faraja kbcm" /></Link></div>
+                            <div id="logo">   <Link to="/"><img src="../faraja.png" alt="faraja kbcm" /></Link></div>
                         </div>
 
                         <div className="col-lg-5 col-md-5 col-sm-12 padding-0 main_navigation_wrapper">

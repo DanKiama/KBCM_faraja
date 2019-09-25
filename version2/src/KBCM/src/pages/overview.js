@@ -7,14 +7,14 @@ import SEO from "../components/seo"
 const Overview = () => (
   <Layout>
     <SEO title="Overview" />
-    <section className="Banner">
+    <section className="Banner inner_page">
           <div className="overlay"></div>
 
       
             <div className="banner_message">
              
                <h1>
-              Overview
+              Long heading will go in here
               
           
               </h1>

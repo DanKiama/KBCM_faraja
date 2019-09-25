@@ -62,7 +62,12 @@ class homePage extends React.Component{
                <div className="row">
                 
                   <div className="col-md-12 col-sm-12 col-12">
+               
                   <img src="../coffee.gif"/>
+                
+              
+                 
+                 
                     <h2>{aboutUsSection.heading}</h2>
                     <p>
                     {aboutUsSection.description.content && aboutUsSection.description.content.length && aboutUsSection.description.content[0].content.length &&
@@ -136,12 +141,8 @@ class homePage extends React.Component{
                        </p>
                         
                       </div>
-        </div>
-       </div>
-        </section>
-        <section className="ideas">
-       <div className="inner">
-       <div className="row">
+        </div><br/><br/>
+        <div className="row">
        <div className="col-md-7 col-sm-12 col-12">
                         <h4>{hostYourOwn.ideaTwoTitle}</h4>
                         <p>
@@ -163,8 +164,16 @@ class homePage extends React.Component{
                       </div>
                      
         </div>
+        <div className="row">
+          <div className="col-md-12 align-center">
+                      <Link className="button" to="/ideas">Read more</Link>
+          </div>
+        
+        </div>
+
        </div>
         </section>
+      
 
         <section className="host_your_own upcoming">
         
