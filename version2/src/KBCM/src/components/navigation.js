@@ -8,14 +8,14 @@ export default () => (
     <ul className={styles.navigation}>
      
       <li className={styles.navigationItem}>
-        <Link to="/"><span data-hover="Home">Home</span></Link>
+        <Link to="../#home"><span data-hover="Home">Home</span></Link>
       </li>
       <li className={styles.navigationItem}>
         <Link to="#about"><span data-hover="About">About </span></Link>
         
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/ideas/"><span data-hover="Ideas">Ideas</span></Link>
+        <Link to="/ideas/#ideasofhosting"><span data-hover="Ideas">Ideas</span></Link>
       </li>
       <li className={styles.navigationItem}>
         <Link to="/"><span data-hover="Gallery">Gallery</span></Link>
@@ -28,6 +28,8 @@ export default () => (
       </li>
     
     </ul>
+
+    
 
 
   </nav>
