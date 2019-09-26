@@ -1,6 +1,11 @@
 footer.footer{
-    background: #161411; 
-    color: #fff
+    background:#9a6e12  url('../images/footer-bar.png'); 
+    color: #fff;
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 30px 0 0
 }
 .footer li {
     display: inline-table;

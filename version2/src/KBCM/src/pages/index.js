@@ -17,7 +17,7 @@ class homePage extends React.Component{
     console.log(upcomingCoffeeMornings);
     return (
       <Layout>
-        <SEO title="Banner" />
+        <SEO title="Home" />
              
               
         <section id="home" className="Banner">
@@ -79,14 +79,14 @@ class homePage extends React.Component{
                </div>
         </section>
 
-        <section className="host_your_own">
+        <section id="host" className="host_your_own">
         
          
                   <div className="inner">
                 
                     <div className="row">
                       <div className="col-md-12 col-sm-12 col-12 align-center">
-                        <h2>Heading</h2>
+                        <h2>Hosting</h2>
                       </div>
                      </div>
                       <div className="row">
@@ -112,58 +112,101 @@ class homePage extends React.Component{
                </div>
         </section>
         <section className="ideas">
-       <div className="inner">
-         <div className="row">
-         <div className="col-md-12 col-sm-12 col-12">
-                        <h2>{hostYourOwn.mainTitle}</h2><br/>
-          </div>
-         </div>
-       <div className="row">
-                      <div className="col-md-5 col-sm-12 col-12 align-center">
-                        
-                      
-                            <Img alt="coffee maker" sizes={hostYourOwn.ideaOne.sizes} />
-            
-                    
-                      </div>
-                      <div className="col-md-7 col-sm-12 col-12">
-                        <h4>{hostYourOwn.ideOneTitle}</h4>
-                        <p>
-                        {hostYourOwn.ideaOneDescription.content && hostYourOwn.ideaOneDescription.content.length && hostYourOwn.ideaOneDescription.content[0].content.length &&
-              
-              hostYourOwn.ideaOneDescription.content[0].content[0].value}
-                       </p>
-                        
-                      </div>
+    <div className="inner">
+        <div className="row">
+            <div className="col-md-12 col-sm-12 col-12">
+                <h2>{hostYourOwn.mainTitle}</h2><br/>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-md-5 col-sm-12 col-12 align-center">
+
+                <Img alt="coffee maker" sizes={hostYourOwn.ideaOne.sizes}/>
+
+            </div>
+            <div className="col-md-7 col-sm-12 col-12">
+                <h4>{hostYourOwn.ideOneTitle}</h4>
+                <p>
+                    {hostYourOwn.ideaOneDescription.content &&
+                    hostYourOwn.ideaOneDescription.content.length &&
+                    hostYourOwn.ideaOneDescription.content[0].content.length &&
+                    hostYourOwn.ideaOneDescription.content[0].content[0].value}
+                </p>
+
+            </div>
         </div><br/><br/>
         <div className="row">
-       <div className="col-md-7 col-sm-12 col-12">
-                        <h4>{hostYourOwn.ideaTwoTitle}</h4>
-                        <p>
-                        {hostYourOwn.ideaTwoDescription.content && hostYourOwn.ideaTwoDescription.content.length && hostYourOwn.ideaTwoDescription.content[0].content.length &&
-              
-              hostYourOwn.ideaTwoDescription.content[0].content[0].value}
-                       </p>
-                        
-                      </div>
-                      <div className="col-md-5 col-sm-12 col-12 align-center">
-                        
-                       
-                          <Img alt="coffee maker" sizes={hostYourOwn.ideaTwoImage.sizes} />
-                     
-                      </div>
-                     
+            <div className="col-md-7 col-sm-12 col-12">
+                <h4>{hostYourOwn.ideaTwoTitle}</h4>
+                <p>
+                    {hostYourOwn.ideaTwoDescription.content &&
+                    hostYourOwn.ideaTwoDescription.content.length &&
+                    hostYourOwn.ideaTwoDescription.content[0].content.length &&
+                    hostYourOwn.ideaTwoDescription.content[0].content[0].value}
+                </p>
+
+            </div>
+            <div className="col-md-5 col-sm-12 col-12 align-center">
+
+                <Img alt="coffee maker" sizes={hostYourOwn.ideaTwoImage.sizes}/>
+
+            </div>
+
         </div>
         <div className="row">
-          <div className="col-md-12 align-center">
-                      <Link className="button" to="/ideas">Read more</Link>
-          </div>
-        
+            <div className="col-md-12 align-center">
+                <Link className="button" to="/ideas/#ideasofhosting">Read more</Link>
+            </div>
+
         </div>
 
-       </div>
-        </section>
-      
+    </div>
+</section>
+
+
+<section className="sing_up">
+  <div className="inner">
+    <div className="row">
+      <div className="col-md-12 ">
+            <h2>Register as a host</h2><br/>
+      </div>
+    </div>
+
+    <div className="row">
+      <div className="col-md-12 ">
+      <form>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+      <label for="Full names">Full names</label>
+      <input type="text" class="form-control" id="names" placeholder="Password" />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Email" />
+    </div>
+   
+  </div>
+  <div class="form-group">
+    <label for="number">Phone number</label>
+    <input type="number" class="form-control" id="number" placeholder="Enter phone number" />
+  </div>
+  <div class="form-group">
+    <label for="location">Where would you like your coffee morning kit to be sent to?</label>
+    <input type="text" class="form-control" id="location" placeholder="Enter location" />
+  </div>
+  
+
+  <button type="submit" class="button">Submit</button>
+</form>
+      </div>
+    </div>
+
+
+    
+  </div>
+</section>
+
+
 
         <section className="host_your_own upcoming">
         

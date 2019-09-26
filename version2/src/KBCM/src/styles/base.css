@@ -45,19 +45,139 @@ body {
   text-align: center
 }
 /*end gloabal css*/
+/*mobile nav css*/
+
+#header .hide{
+  display: none
+
+}
+#header .show{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  top: 100%;
+  
+}
+@media only screen and (min-width:767px){
+  #header .show{
+    display: none
+  }
+}
+#header .show .navbg1,#header .show .navbg2 {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 50%;
+  background:#9a6e12  url('../images/footer-bar.png');
+  top: 0;
+  right: 0;
+  transition: 0.5s;
+  opacity:1;
+  animation-fill-mode: forwards;
+  animation: flipRight 1s;
+  animation-duration :0.5s;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 78%;
+  z-index: -9;
+}
+@keyframes flipRight{
+  0%{
+    right: -100%;
+  }
+  50%{
+    right: 0%;
+  }
+  79%{
+    right: -2%;
+  }
+  100%{
+    right: 0%;
+  }
+}
+#header .show .navbg2{
+  left: 0;
+  animation-fill-mode: forwards;
+  animation: flipLeft 1s;
+  animation-duration :0.5s;
+  background:#9a6e12 ;
+}
+@keyframes flipLeft{
+  0%{
+    left: -100%;
+  }
+  50%{
+    left: 0%;
+  }
+  79%{
+    left: -2%;
+  }
+  100%{
+    left: 0%;
+  }
+}
+#header .hide::after{
+  right:-100%;
+  transition: 0.5s;
+  opacity:0.1
+}
+
+
+#header .show ul{
+  opacity: 0;
+  animation:fadeIn 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  margin:0;
+  padding:0
+}
+@keyframes fadeIn{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+#header .show ul li {
+  text-align: center;
+  list-style: none;
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+#header .show ul li a.drop{
+  margin-bottom: 15px;
+  display: block;
+}
+#header .show ul li ul{
+  margin: 15px 0;
+}
+#header .show ul li ul li{
+  text-transform: lowercase;
+  font-weight: 100;
+  margin: 0px 0;
+}
+/*end mobile nav css/*/
 #header {
   z-index: 999999999;
-  background: #0304038c;
+  background: #000000f0;
   position: fixed;
-  padding: 0 50px 0 50px;
+  padding:15px 100px;
   
+}
+@media only screen and (max-width:767px){
+  #header {
+
+    padding:15px;
+    
+  }
 }
 #header::after{
 position: absolute;
 bottom: 0;
 background: #d6970b;
 content: '';
-height: 3px;
+height: 5px;
 width: 100%;
 left: 0;
 opacity: 0.7;
@@ -82,20 +202,25 @@ transition: 1s;
   margin: auto;
   padding:0 20px
 }
-.button{
+.button, button{
   background: #d6970b;
     padding: 10px;
     color: #fff;
     border-radius: 5px;
     margin-top: 20px;
     display: inline-grid;
+    border: none
 }
 #logo img{
   width: 100%;
   margin: 20px 50px;
   max-width: 140px;
 }
-
+@media only screen and (max-width:767px){
+  #logo img{
+    margin: 20px 15px;
+  }
+}
 #mobileIcon{
   float: right;
 }
@@ -155,6 +280,7 @@ p {
 }
 section h2{
   font-weight: bold;
+  text-transform: uppercase;
 }
 @media(max-width: 600px) {
   p {
@@ -166,6 +292,9 @@ section h2{
 
 a {
   color: currentColor;
+}
+a:hover{
+  text-decoration: none !important
 }
 
 
@@ -185,16 +314,17 @@ section {
   margin: 6px 0;
   transition: 0.4s;
 }
+
 .mobileMenu{
   float: right;
-  margin: 8px
+  margin: 15px
 }
-@media only screen and (max-width:1010px){
+@media only screen and (max-width:767px){
   .main_navigation_wrapper,  ul.navigation_buttons{
     display: none
   }
 }
-@media only screen and (min-width:1010px){
+@media only screen and (min-width:767px){
   .mobileMenu{
     display: none
   }
@@ -216,6 +346,11 @@ section {
 .Banner.inner_page{
   min-height: 50vh
 }
+@media only screen and (max-width:767px){
+  .Banner.inner_page{
+    min-height: 60vh
+  }
+}
 .Banner .banner_message{
   position: absolute;
   top: 35%;
@@ -223,6 +358,15 @@ section {
   max-width: 35%;
   text-align: center;
   margin: auto;
+}
+@media only screen and (max-width:1024px){
+  .Banner .banner_message{
+  
+    left: 5%;
+    max-width: 90%;
+    top:40%
+   
+  }
 }
 .Banner .banner_message h1{
   font-size: 50px;
@@ -232,6 +376,16 @@ section {
   max-width: 90%;
   margin: 40px 0;
   color: #fff;
+}
+@media only screen and (max-width:1024px){
+  .Banner .banner_message p{
+    max-width: 100%;
+    
+  }
+  .Banner .banner_message h1 {
+    font-size: 37px;
+  
+}
 }
 .Banner .overlay{
   position: absolute;
@@ -444,10 +598,14 @@ section {
   .host_your_own span {
     margin: 20px auto;
   }
+  .ideas img{
+    padding-bottom: 20px
+  }
 }
 .host_your_own h2{
   color: #fff
 }
+
 
 .upcoming .logo{
   width: 100%;
@@ -466,6 +624,13 @@ section {
   font-size: 20px;
   color: #fff
 }
+@media only screen and (max-width:600px){
+  .upcoming .event_item{
+    float: none;
+    margin:auto;
+ 
+  }
+}
 .event_name {
   margin: 15px 0;
   border-bottom: 1px solid #fff;
@@ -480,9 +645,25 @@ section {
 @media only screen and (min-width:767px){
   .bottom_section{
     padding: 100px;
+ 
+  
+  }
+}
+@media only screen and (max-width:767px){
+  .bottom_section{
+   
+    background-size: 60%;
+    background-position: bottom right;
   
   }
 }
 .bottom_heading h2{
   
+}
+
+
+
+.contactUs{
+  min-height: 50vh;
+  padding-top:50px 
 }

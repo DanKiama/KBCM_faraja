@@ -4,7 +4,7 @@
     background-size: contain;
 
 }
-@media only screen and (min-width:767px){
+@media only screen and (min-width:1025px){
     .bakesale, .residential, .pledges, .auction, .chama{
 padding:150px
     }
@@ -48,9 +48,11 @@ background-image: none
     display: inline-block;
     padding: 10px 20px;
 }
-@media only screen and(max-widht:600px){
-    .ideas h2{
-     
+
+@media only screen and (max-width:600px){
+    .ideas_page h2{
+        font-size: 23px;
         box-shadow: 10px 10px 10px 10px #ececec;
     }
+    
 }
