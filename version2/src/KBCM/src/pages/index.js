@@ -67,7 +67,7 @@ class homePage extends React.Component{
               
                  
                  
-                    <h2>{aboutUsSection.heading}</h2>
+                    <h4>{aboutUsSection.heading}</h4>
                     <p>
                     {aboutUsSection.description.content && aboutUsSection.description.content.length && aboutUsSection.description.content[0].content.length &&
                                   
