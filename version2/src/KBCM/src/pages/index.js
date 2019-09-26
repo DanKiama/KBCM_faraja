@@ -4,8 +4,7 @@ import Img from 'gatsby-image'
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Parallax } from 'react-scroll-parallax';
-import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 
 
@@ -21,7 +20,7 @@ class homePage extends React.Component{
         <SEO title="Banner" />
              
               
-        <section className="Banner">
+        <section id="home" className="Banner">
           <div className="overlay"></div>
 
       
@@ -122,15 +121,10 @@ class homePage extends React.Component{
        <div className="row">
                       <div className="col-md-5 col-sm-12 col-12 align-center">
                         
-                        <ParallaxProvider>
-            
-                          <Parallax className="custom-class" x={[-50, 0]} tagOuter="figure">
-              
+                      
                             <Img alt="coffee maker" sizes={hostYourOwn.ideaOne.sizes} />
             
-                         
-                          </Parallax>
-                      </ParallaxProvider>
+                    
                       </div>
                       <div className="col-md-7 col-sm-12 col-12">
                         <h4>{hostYourOwn.ideOneTitle}</h4>
@@ -154,13 +148,9 @@ class homePage extends React.Component{
                       </div>
                       <div className="col-md-5 col-sm-12 col-12 align-center">
                         
-                        <ParallaxProvider>
-            
-                          <Parallax className="custom-class" y={[10, 0]} tagOuter="figure">
-                
+                       
                           <Img alt="coffee maker" sizes={hostYourOwn.ideaTwoImage.sizes} />
-                          </Parallax>
-                      </ParallaxProvider>
+                     
                       </div>
                      
         </div>
@@ -220,7 +210,7 @@ class homePage extends React.Component{
             <div className="col-md-7 col-sm-12 col-12 bottom_heading ">
             
               <h2>Long heading will go in here</h2>
-              <h3>Speak to one of us now</h3>
+              <h4>Speak to one of us now</h4>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
               <Link className="button" to="" target="blank">Contact us</Link>

@@ -14,7 +14,7 @@ const contactUs = () => (
             <div className="banner_message">
              
                <h1>
-              Contact us
+              Having any questions? get in touch with us
               
           
               </h1>
@@ -30,13 +30,26 @@ const contactUs = () => (
         <section className="form">
        <div className="inner">
            <div className="row">
-               <div className="col-md-12">
-               <form name="contact" method="POST" data-netlify="true">
+
+           <div className="col-md-6 col-sm-12 col-12">
+                <h2>
+                    Get in touch
+                </h2>
+                <p>
+                    
+                </p>
+
+           </div>
+
+
+
+               <div className="col-md-6 col-sm-12 col-12">
+        <form method="post" action="">
             <p>
                 <label>Your Name: <input type="text" name="name" /></label>   
             </p>
             <p>
-                <label>Your Email: <input type="email" name="email" /></label>
+                <label>Your Email:  <input type="email" name="_replyto" /></label>
             </p>
          
             <p>

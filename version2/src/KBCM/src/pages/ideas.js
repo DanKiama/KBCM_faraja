@@ -7,7 +7,7 @@ import styles from '../components/ideas.css'
 const Ideas = () => (
   <Layout>
     <SEO title="Ideas" />
-    <section className="Banner inner_page">
+    <section id="ideasofhosting" className="Banner inner_page">
           <div className="overlay"></div>
 
       
@@ -27,7 +27,7 @@ const Ideas = () => (
         
         </section>
 
-        <section className="ideas">
+        <section className="ideas_page">
           <div className="">
           <div className="bakesale">
             <div className="inner">

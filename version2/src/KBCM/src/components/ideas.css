@@ -1,5 +1,5 @@
 .bakesale{
-    background-image: url('../images/pic1.png');
+    background-image:  url('../images/pic1.png');
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -10,7 +10,7 @@ padding:150px
     }
 }
 .residential{
-    background: url('../images/pic2.png') no-repeat;
+    background:#eeeeee  url('../images/pic2.png') no-repeat;
     background-position: right;
     background-size: contain;
 
@@ -18,7 +18,7 @@ padding:150px
 }
 
 .chama{
-    background: url('../images/pic7.png') no-repeat;
+    background:#eeeeee  url('../images/pic7.png') no-repeat;
     background-position: right;
     background-size: contain;
 
@@ -26,25 +26,31 @@ padding:150px
 }
 
 .pledges{
-    background-image: url('../images/pic3.png');
+    background: #eeeeee url('../images/pic3.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 40%;
+    background-position: left;
 }
 @media only screen and (max-width:600px){
     .residential, .pledges{
 background-image: none
     }
 }
-.ideas h1{
+.ideas_page h1{
     color: #d6970b;
     font-size: 120px;
     margin: 0 0;
     font-weight: bold
 }
-.ideas h2{
+.ideas_page h2{
     margin: -60px 0 0 30px;
-    background: #f8f9fa url(/concrete_seamless.jpg) 50% 0;
+    background: #eeeeee  ;
     display: inline-block;
     padding: 10px 20px;
-    box-shadow: 10px 10px 10px 10px #ececec;
+}
+@media only screen and(max-widht:600px){
+    .ideas h2{
+     
+        box-shadow: 10px 10px 10px 10px #ececec;
+    }
 }
