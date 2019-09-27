@@ -92,18 +92,18 @@ class homePage extends React.Component{
                       <div className="row">
                         
                           <div className="col-md-4 col-sm-12 col-12">
-                          <Link to="/overview/">
+                          <Link to="/overview/#overviewPage">
                             <span>Host your own</span>
                             </Link> 
                                   
                           </div>
                           <div className="col-md-4 col-sm-12 col-12">
-                          <Link to="/overview/">
+                          <Link to="/overview/#overviewPage">
                           <span>How it helps</span>
                             </Link> 
                           </div>
                           <div className="col-md-4 col-sm-12 col-12">
-                          <Link to="/overview/">
+                          <Link to="/overview/#overviewPage">
                           <span>KBCM agenda</span></Link> 
                           </div>
                         </div>
@@ -164,7 +164,7 @@ class homePage extends React.Component{
 </section>
 
 
-<section className="sing_up">
+<section id="register" className="sing_up">
   <div className="inner">
     <div className="row">
       <div className="col-md-12 ">

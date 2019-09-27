@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const Overview = () => (
   <Layout>
     <SEO title="Overview" />
-    <section className="Banner inner_page">
+    <section id="overviewPage" className="Banner inner_page">
           <div className="overlay"></div>
 
       

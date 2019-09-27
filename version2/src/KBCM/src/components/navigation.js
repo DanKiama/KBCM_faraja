@@ -25,7 +25,7 @@ export default () => (
         <Link to="#host"><span data-hover="Host">Host</span></Link>
         <ul className={styles.dropdown}>
               <li> <Link to="/ideas/">Ideas </Link></li>
-              <li> <Link to="/contactus/">Register </Link></li>
+              <li> <Link to="/#register">Register </Link></li>
         </ul>
       </li>
       <li className={styles.navigationItem}>
