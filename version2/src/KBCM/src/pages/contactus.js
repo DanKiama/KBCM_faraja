@@ -162,10 +162,10 @@ export default class RegisterForm extends React.Component {
 
                                                 <div className="form-group">
                                                     <div className="row">
-                                                        <div className="col-md-6">
-                                                            <input className="form-control firstname" placeholder="First Name*" type="text" name="firstName"   onChange={this.handleChange}></input><br/>
+                                                        <div className="col-md-6 col-sm-12 col-12 input_name">
+                                                            <input className="form-control firstname" placeholder="First Name*" type="text" name="firstName"   onChange={this.handleChange}></input>
                                                         </div>
-                                                        <div className="col-md-6">
+                                                        <div className="col-md-6 col-sm-12 col-12 ">
                                                             <input
                                                                 className="form-control"
                                                                 type="text"
@@ -177,29 +177,43 @@ export default class RegisterForm extends React.Component {
                                                 </div>
 
                                                 <div className="form-group">
-                                                    <input
+                                                <div className="row">
+                                                        <div className="col-md-12">
+                                                        <input
                                                         className="form-control"
                                                         type="text"
                                                         placeholder="Email*"
                                                         name="email"
                                                         onChange={this.handleChange}/>
+                                                        </div>
+                                                    </div>
+                                                   
                                                 </div>
                                                 <div className="form-group">
-                                                    <input
+                                                <div className="row">
+                                                        <div className="col-md-12">
+                                                        <input
                                                         className="form-control"
                                                         type="text"
                                                         placeholder="Subject*"
                                                         name="subject"
                                                         onChange={this.handleChange}/>
+                                                        </div>
+                                                    </div>
+                                                   
                                                 </div>
 
                                                 <div className="form-group">
-
-                                                    <textarea
+                                                <div className="row">
+                                                        <div className="col-md-12">
+                                                        <textarea
                                                         className="form-control"
                                                         placeholder="Message*"
                                                         name="message"
                                                         onChange={this.handleChange}></textarea>
+                                                        </div>
+                                                    </div>
+                                                   
                                                 </div>
 
                                                 <a className="button" onClick={this.handleSubmit}>Submit</a>

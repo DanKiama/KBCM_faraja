@@ -205,11 +205,13 @@ transition: 1s;
 .button, button{
   background: #d6970b;
     padding: 10px;
-    color: #fff;
+    color: #fff !important;
     border-radius: 5px;
     margin-top: 20px;
     display: inline-grid;
-    border: none
+    border: none;
+    margin: 10px 0;
+    font-weight: bold;
 }
 #logo img{
   width: 100%;
@@ -344,7 +346,7 @@ section {
   position: relative
 }
 .Banner.inner_page{
-  min-height: 50vh
+  min-height: 70vh
 }
 @media only screen and (max-width:767px){
   .Banner.inner_page{
@@ -420,7 +422,7 @@ section {
 .scroll{
   position: relative;
   width: 24px;
-  height: 24px;
+  height: 70px;
   margin: auto
 }
 .chevron {
@@ -666,4 +668,9 @@ section {
 .contactUs{
   min-height: 50vh;
   padding-top:50px 
+}
+@media only screen and (max-width:767px){
+  .contactUs .input_name{
+    margin:15px 0
+  }
 }

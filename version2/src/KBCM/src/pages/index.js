@@ -25,7 +25,7 @@ class homePage extends React.Component{
 
       
             <div className="banner_message">
-             
+           
                <h1>
           <img src="../header.png"/>
               
@@ -175,28 +175,28 @@ class homePage extends React.Component{
     <div className="row">
       <div className="col-md-12 ">
       <form>
-  <div class="form-row">
-  <div class="form-group col-md-6">
-      <label for="Full names">Full names</label>
-      <input type="text" class="form-control" id="names" placeholder="Password" />
+  <div className="form-row">
+  <div className="form-group col-md-6">
+      <label>Full names</label>
+      <input type="text" className="form-control" id="names" placeholder="Enter your full names" />
     </div>
-    <div class="form-group col-md-6">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="Email" />
+    <div className="form-group col-md-6">
+      <label >Email</label>
+      <input type="email" className="form-control" id="email" placeholder="Email" />
     </div>
    
   </div>
-  <div class="form-group">
-    <label for="number">Phone number</label>
-    <input type="number" class="form-control" id="number" placeholder="Enter phone number" />
+  <div className="form-group">
+    <label >Phone number</label>
+    <input type="number" className="form-control" id="number" placeholder="Enter phone number" />
   </div>
-  <div class="form-group">
-    <label for="location">Where would you like your coffee morning kit to be sent to?</label>
-    <input type="text" class="form-control" id="location" placeholder="Enter location" />
+  <div className="form-group">
+    <label >Where would you like your coffee morning kit to be sent to?</label>
+    <input type="text" className="form-control" id="location" placeholder="Enter location" />
   </div>
   
 
-  <button type="submit" class="button">Submit</button>
+  <button type="submit" className="button">Submit</button>
 </form>
       </div>
     </div>
@@ -269,6 +269,7 @@ class homePage extends React.Component{
       </Layout>
       
     )
+   
   }
 }
 
