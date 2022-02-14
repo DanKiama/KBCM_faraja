@@ -667,8 +667,8 @@ section {
                 /* GALLERY SECTION */
 /* ===================================================== */
 .gallery-section-hero {
-  padding-top: 450px;
-  background: url(../images/coffee1.jpg);
+  padding-top: 300px;
+  background: url(../images/dark.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -683,7 +683,7 @@ section {
   color: #fff;
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 100px;
 }
 
 .gallery {

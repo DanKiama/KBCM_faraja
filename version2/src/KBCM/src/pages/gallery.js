@@ -3,24 +3,39 @@ import Img from 'gatsby-image';
 import get from 'lodash/get';
 import { Link, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import baguetteBox from "baguettebox.js";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { node } from "prop-types";
+
 
 class gallery extends React.Component {
     render() {
-        // baguetteBox.run('.gallery');
+        console.log(this.props)
+        // const recipeEdges = this.props.data.allDrupalRecipes.edges
+        const gallery = this.props.data.allContentfulPhotoGallery.nodes[0].images
+        console.log(gallery)
+        const filters = [
+            { name: "Coffee Morning", status: false },
+            { name: "Snacks", status: false },
+            { name: "Meet Up", status: false },
+            { name: "Events", status: false },
+            { name: "Others", status: false },
+        ];
+
+
         return (
             <Layout>
                 <SEO title="Gallery" />
+
+
 
                 <div className="gallery-section-hero bg-image">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
                                 <div className="hero-text">
-                                    {/* <h2>Memories in a Snap</h2> */}
+                                    <h2>Memories in a Snap</h2>
                                 </div>
                             </div>
                         </div >
@@ -43,113 +58,21 @@ class gallery extends React.Component {
                         </div>
 
                         <div className="row gallery_image">
-                            <div className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                <div className="gallery_item">
-                                    <div className="gallery_item_image set-bg">
-                                        <img src="../img6.jpg" alt="image" className="img-fluid" />
-                                        <a className="view-btn" href="../img6.jpg">
-                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-                                        </a>
-                                    </div>
-                                    <div className="gallery_item_text">
-                                        <h4>Coffee Mornings</h4>
-                                        <ul>
-                                            <li>Coffee & snack</li>
-                                        </ul>
+                            {gallery.map((image, i) => (
+                                <div key={i} className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
+                                    <div className="gallery_item">
+                                        <div className="gallery_item_image set-bg">
+                                            <img src={image.photo.file.url} className="img-fluid" />
+                                        </div>
+                                        <div className="gallery_item_text">
+                                            <h4>Coffee Mornings</h4>
+                                            <ul>
+                                                <li>Coffee & snack</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                <div className="gallery_item">
-                                    <div className="gallery_item_image set-bg">
-                                        <img src="../img1.jpg" alt="image" className="img-fluid" />
-                                        <a className="view-btn" href="../img1.jpg">
-                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-                                        </a>
-                                    </div>
-                                    <div className="gallery_item_text">
-                                        <h4>Coffee Mornings</h4>
-                                        <ul>
-                                            <li>Coffee & snack</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                <div className="gallery_item">
-                                    <div className="gallery_item_image set-bg">
-                                        <img src="../img2.jpg" alt="image" className="img-fluid" />
-                                        <a className="view-btn" href="../img2.jpg">
-                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-                                        </a>
-                                    </div>
-                                    <div className="gallery_item_text">
-                                        <h4>Coffee Mornings</h4>
-                                        <ul>
-                                            <li>Coffee & snack</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                <div className="gallery_item">
-                                    <div className="gallery_item_image set-bg">
-                                        <img src="../img4.jpg" alt="image" className="img-fluid" />
-                                        <a className="view-btn" href="../img4.jpg">
-                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-                                        </a>
-                                    </div>
-                                    <div className="gallery_item_text">
-                                        <h4>Coffee Mornings</h4>
-                                        <ul>
-                                            <li>Coffee & snack</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                <div className="gallery_item">
-                                    <div className="gallery_item_image set-bg">
-                                        <img src="../img3.jpg" alt="image" className="img-fluid" />
-                                        <a className="view-btn" href="../img3.jpg">
-                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-                                        </a>
-                                    </div>
-                                    <div className="gallery_item_text">
-                                        <h4>Coffee Mornings</h4>
-                                        <ul>
-                                            <li>Coffee & snack</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                <div className="gallery_item">
-                                    <div className="gallery_item_image set-bg">
-                                        <img src="../img5.jpg" alt="image" className="img-fluid" />
-                                        <a className="view-btn" href="../img5.jpg">
-                                            <i className="fa-solid fa-magnifying-glass"></i>
-                                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-                                        </a>
-                                    </div>
-                                    <div className="gallery_item_text">
-                                        <h4>Coffee Mornings</h4>
-                                        <ul>
-                                            <li>Coffee & snack</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -159,4 +82,30 @@ class gallery extends React.Component {
 
 }
 
+
 export default gallery;
+
+
+export const query = graphql`
+    query galleryQueryAndGalleryQuery {
+        allContentfulPhotoGallery {
+            nodes {
+              images {
+                photo {
+                  file {
+                    url
+                  }
+                }
+              }
+              coverImage {
+                title
+              }
+              title {
+                title
+              }
+            }
+          }
+    }
+`
+
+
