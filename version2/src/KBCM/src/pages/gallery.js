@@ -1,35 +1,40 @@
 import React from "react";
-import Img from 'gatsby-image';
-import get from 'lodash/get';
-import { Link, graphql } from 'gatsby';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { graphql } from 'gatsby';
+import StackGrid, { easings, transitions } from "react-stack-grid";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { node } from "prop-types";
 
+const { scaleDown, fadeUp } = transitions;
 
 class gallery extends React.Component {
+    constructor() {
+        super();
+        this.state = { width: -1 };
+    }
+
+
     render() {
         console.log(this.props)
-        // const recipeEdges = this.props.data.allDrupalRecipes.edges
         const gallery = this.props.data.allContentfulPhotoGallery.nodes[0].images
-        console.log(gallery)
-        const filters = [
-            { name: "Coffee Morning", status: false },
-            { name: "Snacks", status: false },
-            { name: "Meet Up", status: false },
-            { name: "Events", status: false },
-            { name: "Others", status: false },
-        ];
 
-
+        const newImageData = [];
+        gallery.forEach((image) => {
+            let imageData = [];
+            imageData = {
+                src: image.photo.file.url,
+                srcSet: image.photo.file.url,
+                sizes: ["(min-width: 480px) 50vw,(min-width: 1024px) 33.3vw,100vw"],
+                width: image.photo.file.details.image.width,
+                height: image.photo.file.details.image.height,
+            }
+            newImageData.push(imageData);
+        })
+        console.log(newImageData);
+        const width = this.state.width;
         return (
             <Layout>
                 <SEO title="Gallery" />
-
-
-
                 <div className="gallery-section-hero bg-image">
                     <div className="container">
                         <div className="row">
@@ -43,39 +48,30 @@ class gallery extends React.Component {
                 </div >
 
                 {/* Gallery Section */}
-                <section section className="gallery items" >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <ul className="gallery_filter">
-                                    <li className="active" data-filter="*">All</li>
-                                    <li data-filter=".coffee-morning">Coffee Morning</li>
-                                    <li data-filter=".bike-ride">Bike Ride</li>
-                                    <li data-filter=".meeting">Meeting</li>
-                                    <li data-filter=".exercise-center">Exercise Center</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="row gallery_image">
+                <section section className="gallery" >
+                    <div>
+                        <StackGrid
+                            columnWidth={400}
+                            appearDelay={10}
+                            duration={480}
+                            easing={easings.quartOut}
+                            appear={fadeUp.appear}
+                            appeared={fadeUp.appeared}
+                            enter={fadeUp.enter}
+                            entered={fadeUp.entered}
+                            leaved={fadeUp.leaved}
+                            monitorImagesLoaded={false}
+                        >
                             {gallery.map((image, i) => (
-                                <div key={i} className="col-lg-4 col-md-6 col-sm-6 coffe-morning">
-                                    <div className="gallery_item">
-                                        <div className="gallery_item_image set-bg">
-                                            <img src={image.photo.file.url} className="img-fluid" />
-                                        </div>
-                                        <div className="gallery_item_text">
-                                            <h4>Coffee Mornings</h4>
-                                            <ul>
-                                                <li>Coffee & snack</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                                <figure key={i} className="image">
+                                    <img src={image.photo.file.url} />
+                                </figure>
+                            ))};
+                        </StackGrid>
                     </div>
                 </section>
+
+
             </Layout >
         )
     }
@@ -90,22 +86,27 @@ export const query = graphql`
     query galleryQueryAndGalleryQuery {
         allContentfulPhotoGallery {
             nodes {
-              images {
-                photo {
-                  file {
-                    url
-                  }
+                images {
+                    photo {
+                    file {
+                        url
+                        details {
+                        image {
+                            height
+                            width
+                        }
+                        }
+                    }
+                    }
                 }
-              }
-              coverImage {
-                title
-              }
-              title {
-                title
-              }
+                coverImage {
+                    title
+                }
+                title {
+                    title
+                }
             }
-          }
+        }
     }
 `
-
 
