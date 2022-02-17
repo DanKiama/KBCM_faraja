@@ -682,7 +682,9 @@ section {
 }
 
 .gallery {
-  background: #070300;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
 
