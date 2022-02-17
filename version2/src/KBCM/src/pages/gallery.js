@@ -1,12 +1,10 @@
 import React from "react";
 import { graphql } from 'gatsby';
-// import StackGrid, { easings, transitions } from "react-stack-grid";
 import Gallery from 'react-grid-gallery';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-// const { scaleDown, fadeUp } = transitions;
 
 class gallery extends React.Component {
     render() {
@@ -17,13 +15,13 @@ class gallery extends React.Component {
         gallery.forEach((image) => {
             let imageData = [];
             imageData = {
-                src: image.photo.file.url,
-                srcset: image.photo.file.url,
-                width: image.photo.file.details.image.width,
-                height: image.photo.file.details.image.height,
-                thumbnail: image.photo.file.url,
-                thumbnailWidth: image.photo.file.details.image.width,
-                thumbnailHeight: image.photo.file.details.image.height,
+                src: image.file.url,
+                srcset: image.file.url,
+                width: image.file.details.image.width,
+                height: image.file.details.image.height,
+                thumbnail: image.file.url,
+                thumbnailWidth: image.file.details.image.width,
+                thumbnailHeight: image.file.details.image.height,
             }
             newImageData.push(imageData);
         })
@@ -56,7 +54,6 @@ class gallery extends React.Component {
                                 backdropClosesModal={true}
                                 lightboxWidth={500}
                             />
-
                         </section>
                     </div>
                 </div>
@@ -77,16 +74,14 @@ export const query = graphql`
         allContentfulPhotoGallery {
             nodes {
                 images {
-                    photo {
                     file {
-                        url
-                        details {
+                    details {
                         image {
-                            height
                             width
-                        }
+                            height
                         }
                     }
+                    url
                     }
                 }
                 coverImage {
