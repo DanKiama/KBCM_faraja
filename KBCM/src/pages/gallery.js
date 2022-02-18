@@ -49,10 +49,10 @@ class gallery extends React.Component {
                             <Gallery
                                 className=""
                                 images={newImageData}
-                                rowHeight={180}
+                                rowHeight={300}
                                 enableImageSelection={false}
                                 backdropClosesModal={true}
-                                lightboxWidth={500}
+                                lightboxWidth={800}
                             />
                         </section>
                     </div>
