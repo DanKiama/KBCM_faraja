@@ -43,22 +43,21 @@ class gallery extends React.Component {
                 </div>
 
 
-                <div className="container">
+                <div className="container-fluid">
                     <div className="row">
                         <section className="gallery">
                             <Gallery
                                 className=""
                                 images={newImageData}
-                                rowHeight={300}
+                                rowHeight={200}
+                                margin={2}
                                 enableImageSelection={false}
                                 backdropClosesModal={true}
-                                lightboxWidth={800}
+                                lightboxWidth={500}
                             />
                         </section>
                     </div>
                 </div>
-
-
             </Layout >
         )
     }
@@ -67,7 +66,6 @@ class gallery extends React.Component {
 
 
 export default gallery;
-
 
 export const query = graphql`
     query GalleryQuery {
