@@ -4,7 +4,7 @@ import Gallery from 'react-grid-gallery';
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-
+ 
 
 class gallery extends React.Component {
     render() {
