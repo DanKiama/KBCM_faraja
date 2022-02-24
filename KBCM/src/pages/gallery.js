@@ -43,14 +43,14 @@ class gallery extends React.Component {
                 </div>
 
 
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <section className="gallery">
                             <Gallery
                                 className=""
                                 images={newImageData}
-                                rowHeight={200}
-                                margin={2}
+                                rowHeight={500}
+                                margin={3}
                                 enableImageSelection={false}
                                 backdropClosesModal={true}
                                 lightboxWidth={500}
